@@ -36,7 +36,6 @@ if __name__ == '__main__':
 		payload='{"type":"phone","phone":{"phone":"+8618888888888","code":"'+str(i).zfill(4)+'"}}'
 		time,mess = Get_str(payload)
 		sign = get_hamc_sha1(mess, key)
-		# Authorization='Authorization: hmac id="APID1OI0pbHJ26Tr8M6u57m4zg5Clf84txXwv191", algorithm="hmac-sha1", headers="x-date", signature="'+sign+'"'
 		
 		with open('time.txt','a') as t:
 			t.write(time+'\n')
